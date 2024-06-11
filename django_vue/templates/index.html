@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 搜索引擎</title>
+    <link rel="stylesheet" href="/static/css/login_style.css">
+    <!-- 引入marked库 -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/static/css/logo1.png" alt="metaso.cn">
+            </div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="#">              </a></li>
+                    <li><a href="#">              </a></li>
+                    <li><a href="#">              </a></li>
+                    <li><a href="#">              </a></li>
+                    <li><a href="#">              </a></li>
+
+                    <li><a href="#">主页</a></li>
+                   <li><a href="/api/recent/">最近</a></li>
+                    {% else %}
+                    <li><a href="#">              </a></li>
+                    <li><a href="#">主页</a></li>
+                   <li><a href="/api/recent/">最近</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="login">
+                {% if user.is_authenticated %}
+                    <span>欢迎, 用户: {{ user.username }}</span>
+                    <a href="/api/logout/"><button>注销</button></a>
+                {% else %}
+                    <a href="/api/login/"><button>登录/注册</button></a>
+                {% endif %}
+        </header>
+        <main>
+             <div class="vertical-ones">
+                <p>　　　</p>
+                <p>　　　</p>
+                <p>　　　</p>
+            </div>
+            <div class="search-box">
+
+                <h1>看懂AI搜索</h1>
+                <p>看懂——电影深度解析助手</p>
+                <textarea id="searchInput" placeholder="请输入，Enter键发送，Shift+Enter键换行"></textarea>
+                <div class="options">
+                    <input type="radio" id="all" name="search" checked>
+                    <label for="all">全网</label>
+                </div>
+                <div class="buttons">
+                    <button id="simpleSearch">观影前</button>
+                    <button id="deepSearch">观影中</button>
+                    <button id="researchSearch">观影后</button>
+                </div>
+            </div>
+            <div id="loading" class="loading" style="display: none;">正在加载...</div>
+            <div id="results" class="results" style="display: none;"></div>
+            <!-- 观影前的目录层次结构 -->
+            <div id="sections-simple" class="sections" style="display: none;">
+                <div class="section">
+                    <button class="section-header">电影创作背景</button>
+                    <div class="section-content" id="simple-background" style="display: none;"></div>
+                </div>
+                <div class="section">
+                    <button class="section-header">电影剧情概括</button>
+                    <div class="section-content" id="simple-summary" style="display: none;"></div>
+                </div>
+                <div class="section">
+                    <button class="section-header">电影演员导演名单</button>
+                    <div class="section-content" id="simple-cast" style="display: none;"></div>
+                </div>
+            </div>
+            <!-- 观影中的目录层次结构 -->
+            <div id="sections-deep" class="sections" style="display: none;">
+                <div class="section">
+                    <button class="section-header">影片分析</button>
+                    <div class="section-content" id="deep-analysis" style="display: none;"></div>
+                </div>
+                <div class="section">
+                    <button class="section-header">关键场景</button>
+                    <div class="section-content" id="deep-scenes" style="display: none;"></div>
+                </div>
+            </div>
+            <!-- 观影后的目录层次结构 -->
+            <div id="sections-research" class="sections" style="display: none;">
+                <div class="section">
+                    <button class="section-header">影评总结</button>
+                    <div class="section-content" id="research-review" style="display: none;"></div>
+                </div>
+                <div class="section">
+                    <button class="section-header">影片影响</button>
+                    <div class="section-content" id="research-impact" style="display: none;"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 50px; /* 增大底部的间距 */
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center; /* 使导航栏居中 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 使导航项居中对齐 */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.login button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 主要内容样式 */
+main {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    color: #007bff;
+}
+
+.search-box p {
+    font-size: 18px;
+    color: #666;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.options {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 加载动画样式 */
+.loading {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+/* 目录层次结构样式 */
+.sections {
+    margin-top: 20px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section-header {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-header:hover {
+    background-color: #f1f1f1;
+}
+
+.section-content {
+    padding: 10px;
+    display: none;
+    font-size: 16px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+/* 竖直排列样式 */
+.vertical-ones p {
+    font-size: 18px;
+    color: #ffffff;
+}
+/* 页脚样式 */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}

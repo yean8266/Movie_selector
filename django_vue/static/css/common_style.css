@@ -1,0 +1,128 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*
+flex: flex-grow flex-shrink flex-basis
+*/
+.header {
+    flex: 0 0 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #5c307d;
+}
+
+.header-logo {
+    flex: 0 0 1;
+    background-image: url(/django_vue/static/media/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 130px;
+    height: 130px;
+    margin-left: 20px;
+}
+
+.header-text {
+    flex: 1 0 auto;
+    margin: 10px;
+    line-height: 5px;
+    padding: 10px;
+    font-family: '微软雅黑', '黑体';
+    color: #ffffff;
+}
+
+.content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    /* background-color: aqua; */
+    margin: 20px;
+    min-width: 800px;
+    width: 80%;
+}
+
+.halfcolumn {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    background-color:bisque;
+    justify-content: center;
+    margin: 0px;
+    width: 50%;
+    height: 100%;
+}
+
+.splited_row {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #5c307d;
+}
+
+.center_justify_column {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.footer-text {
+    text-align: center;
+    color: black;
+}
+
+.footer p {
+    font-family: arial;
+    font-size: 12px;
+    line-height: 5px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+}
+
+.square_button {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
+
+.center_container{
+    position: relative;
+    left: 50%;
+}
+
+red {
+    color: red;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最近搜索</title>
+    <link rel="stylesheet" href="/static/css/recent_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/static/css/logo1.png" alt="metaso.cn">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/api/index">主页</a></li>
+                    <li><a href="/api/recent/">最近</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                {% if user.is_authenticated %}
+                    <span>欢迎, 用户: {{ user.username }}</span>
+                    <a href="/api/logout/"><button>注销</button></a>
+                {% else %}
+                    <a href="/api/login/"><button>登录/注册</button></a>
+                {% endif %}
+                </div>
+        </header>
+        <main>
+            <h1>最近搜索</h1>
+            {% if records %}
+                <ul>
+                    {% for record in records %}
+                        <li>
+                            <h2>{{ record.movie.title }}</h2>
+                            <p><strong>创作背景:</strong> {{ record.movie.background }}</p>
+                            <p><strong>剧情概括:</strong> {{ record.movie.summary }}</p>
+                            <p><strong>演员名单:</strong> {{ record.movie.cast }}</p>
+                            <p><strong>影片分析:</strong> {{ record.movie.analysis }}</p>
+                            <p><strong>关键场景:</strong> {{ record.movie.scenes }}</p>
+                            <p><strong>影评总结:</strong> {{ record.movie.review }}</p>
+                            <p><strong>影片影响:</strong> {{ record.movie.impact }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>没有找到最近搜索的电影。</p>
+            {% endif %}
+        </main>
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>

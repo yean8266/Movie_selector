@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="/static/css/preview_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/static/css/logo1.png" alt="metaso.cn">
+            </div>
+        </header>
+        <main>
+            <div class="login-box">
+                <h1>用户登录</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">登录</button>
+                </form>
+                <p>还没有账户？<a href="#" id="showRegister">注册</a></p>
+            </div>
+            <div class="register-box" style="display: none;">
+                <h1>用户注册</h1>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="reg_username">用户名</label>
+                        <input type="text" id="reg_username" name="reg_username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_password">密码</label>
+                        <input type="password" id="reg_password" name="reg_password" required>
+                    </div>
+                    <button type="submit">注册</button>
+                </form>
+                <p>已有账户？<a href="#" id="showLogin">登录</a></p>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
+    <script src="/static/js/login.js"></script>
+</body>
+</html>
